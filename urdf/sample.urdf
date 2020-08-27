@@ -39,12 +39,12 @@
     <axis xyz="1 0 0"/>
 
     <!-- Joint limits -->
-    <limit lower="-3.1415" upper="3.1415" velocity="10" effort="100"/>
+    <limit lower="-3.3415" upper="3.3415" velocity="10" effort="100"/>
     <!-- Soft limits -->
     <safety_controller k_position="3"
                     k_velocity="1000"
-                    soft_lower_limit="-3.1415"
-                    soft_upper_limit="3.1415" />
+                    soft_lower_limit="-3.3415"
+                    soft_upper_limit="3.3415" />
   </joint>
 
   <joint name="arm_joint_2" type="revolute">

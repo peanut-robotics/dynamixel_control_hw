@@ -21,7 +21,7 @@
 
   <!-- launch our hardware interface -->
   <group unless="$(arg fake_robot)">
-    <arg name="protocol_version" default="p1"
+    <arg name="protocol_version" default="p2"
          doc="Choses the dynamixel protocol variant to be used (p1 or p2)"/>
     <node pkg="dynamixel_control_hw"
           type="dynamixel_control_$(arg protocol_version)"
@@ -32,7 +32,6 @@
     <node name="controller" pkg="controller_manager" type="spawner"
           respawn="false" output="screen" clear_params="true"
           args="/dynamixel_controllers/joint_state_controller
-                /dynamixel_controllers/traj_controller
-                /dynamixel_controllers/vel_controller" />
+                /dynamixel_controllers/traj_controller" />
   </group>
 </launch>
